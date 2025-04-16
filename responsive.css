@@ -1,0 +1,48 @@
+/* Medium screen (tablets) */
+@media (min-width: 901) {
+    .side-bar {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 900px) {
+    .side-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 300px;
+        padding-top: 50px;
+        transform: translateX(-100%);
+        opacity: 0;
+        z-index: 100;
+    }
+
+    input[type = 'checkbox']:checked ~ .side-bar {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    input[type = 'checkbox']:checked ~ label {
+        background-color: transparent;
+    }
+
+    .content {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    label {
+        display: block;
+    }
+
+    #users {
+        height: 80vh;
+    }
+
+    .results {
+        margin-top: 30px;
+    }
+}

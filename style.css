@@ -1,0 +1,166 @@
+:root {
+    --side-color: #2b2738;
+    --bg-color: #f1f2f4;
+    --result-color: #8252fb;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+    transition: all .2s linear;
+    color: white;
+    font-family: sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section {
+    padding: 60px 0;
+    height: 100vh;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 290px 1fr;
+    gap: 30px;
+}
+
+.side-bar {
+    width: 320px;
+    background-color: var(--side-color);
+    padding: 20px;
+    height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+
+label {
+    background-color: var(--bg-color);
+    cursor: pointer;
+    display: none;
+    position: fixed;
+    padding: 10px 15px;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+.fa-bars, .fa-xmark {
+    font-size: 25px;
+}
+
+.fa-bars {
+    color: black;
+}
+
+.fa-xmark {
+    color: white;
+}
+
+input {
+    display: none;
+}
+
+#users {
+    margin-top: 10px;
+    padding-top: 10px;
+    height: 85vh;
+    overflow: auto;
+    scrollbar-width: none; /* للفايرفوكس */
+    -ms-overflow-style: none;
+}
+
+#users div {
+    padding: 10px 0;
+    cursor: pointer;
+    color: #eee;
+    line-height: 1.2;
+}
+
+#users div p, em {
+    color: #eeeeee7e;
+}
+
+#users div em {
+    font-size: 13px;
+}
+
+.active {
+    position: relative;
+}
+
+#users .active::before {
+    content: '';
+    position: absolute;
+    top: 40%;
+    width: 12px;
+    height: 12px;
+    background-color: rgb(2, 177, 2);
+    border-radius: 50%;
+}
+
+#users .active p,  #users .active em {
+    color: white;
+    margin-left: 22px;
+}
+
+.results {
+    padding: 0 15px;
+    padding-top: 15px;
+    margin: 0 auto;
+    height: 100vh;
+    width: 100%;
+    overflow-y: auto;
+    position: relative;
+}
+
+.result {
+    background-color: var(--result-color);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.title {
+    font-size: 18px;
+    padding: 5px 0;
+}
+
+.body {
+    font-size: 15px;
+    padding: 5px 0;
+}
+
+h2 {
+    font-size: 40px;
+    color: rgba(0, 0, 0, 0.616);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
